@@ -39,7 +39,7 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.btnCargar = new System.Windows.Forms.Button();
             this.grbConsultadeDATOS = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dvgClientes = new System.Windows.Forms.DataGridView();
             this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LimitedeCrédito = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,7 +49,7 @@
             this.btnListar = new System.Windows.Forms.Button();
             this.grbCargarDatos.SuspendLayout();
             this.grbConsultadeDATOS.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // grbCargarDatos
@@ -97,6 +97,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 2;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // txtDeuda
             // 
@@ -104,6 +105,7 @@
             this.txtDeuda.Name = "txtDeuda";
             this.txtDeuda.Size = new System.Drawing.Size(100, 20);
             this.txtDeuda.TabIndex = 3;
+            this.txtDeuda.TextChanged += new System.EventHandler(this.txtDeuda_TextChanged);
             // 
             // txtLimite
             // 
@@ -111,6 +113,7 @@
             this.txtLimite.Name = "txtLimite";
             this.txtLimite.Size = new System.Drawing.Size(100, 20);
             this.txtLimite.TabIndex = 7;
+            this.txtLimite.TextChanged += new System.EventHandler(this.txtLimite_TextChanged);
             // 
             // txtUsuario
             // 
@@ -152,7 +155,7 @@
             // 
             // grbConsultadeDATOS
             // 
-            this.grbConsultadeDATOS.Controls.Add(this.dataGridView1);
+            this.grbConsultadeDATOS.Controls.Add(this.dvgClientes);
             this.grbConsultadeDATOS.Location = new System.Drawing.Point(24, 228);
             this.grbConsultadeDATOS.Name = "grbConsultadeDATOS";
             this.grbConsultadeDATOS.Size = new System.Drawing.Size(495, 191);
@@ -160,18 +163,19 @@
             this.grbConsultadeDATOS.TabStop = false;
             this.grbConsultadeDATOS.Text = "Consulta de Datos";
             // 
-            // dataGridView1
+            // dvgClientes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dvgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Código,
             this.Usuario,
             this.LimitedeCrédito,
             this.Deuda});
-            this.dataGridView1.Location = new System.Drawing.Point(20, 23);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(469, 150);
-            this.dataGridView1.TabIndex = 0;
+            this.dvgClientes.Location = new System.Drawing.Point(20, 23);
+            this.dvgClientes.Name = "dvgClientes";
+            this.dvgClientes.Size = new System.Drawing.Size(469, 150);
+            this.dvgClientes.TabIndex = 0;
+            this.dvgClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Código
             // 
@@ -218,6 +222,7 @@
             this.btnListar.TabIndex = 9;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // GestionClientes
             // 
@@ -235,7 +240,7 @@
             this.grbCargarDatos.ResumeLayout(false);
             this.grbCargarDatos.PerformLayout();
             this.grbConsultadeDATOS.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,7 +259,7 @@
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.GroupBox grbConsultadeDATOS;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dvgClientes;
         private System.Windows.Forms.DataGridViewTextBoxColumn Código;
         private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn LimitedeCrédito;
