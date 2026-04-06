@@ -45,8 +45,8 @@
             this.LimitedeCrédito = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Deuda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTotaldeDeuda = new System.Windows.Forms.Label();
-            this.txtTotaldeDeuda = new System.Windows.Forms.TextBox();
             this.btnListar = new System.Windows.Forms.Button();
+            this.lblDeudaTotal = new System.Windows.Forms.Label();
             this.grbCargarDatos.SuspendLayout();
             this.grbConsultadeDATOS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgClientes)).BeginInit();
@@ -205,32 +205,34 @@
             this.lblTotaldeDeuda.Size = new System.Drawing.Size(81, 13);
             this.lblTotaldeDeuda.TabIndex = 9;
             this.lblTotaldeDeuda.Text = "Total de Deuda";
-            // 
-            // txtTotaldeDeuda
-            // 
-            this.txtTotaldeDeuda.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTotaldeDeuda.Location = new System.Drawing.Point(419, 447);
-            this.txtTotaldeDeuda.Name = "txtTotaldeDeuda";
-            this.txtTotaldeDeuda.Size = new System.Drawing.Size(117, 13);
-            this.txtTotaldeDeuda.TabIndex = 10;
+            this.lblTotaldeDeuda.Click += new System.EventHandler(this.lblTotaldeDeuda_Click);
             // 
             // btnListar
             // 
             this.btnListar.Location = new System.Drawing.Point(419, 479);
             this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(117, 26);
+            this.btnListar.Size = new System.Drawing.Size(100, 26);
             this.btnListar.TabIndex = 9;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
             this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
+            // 
+            // lblDeudaTotal
+            // 
+            this.lblDeudaTotal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblDeudaTotal.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblDeudaTotal.Location = new System.Drawing.Point(419, 446);
+            this.lblDeudaTotal.Name = "lblDeudaTotal";
+            this.lblDeudaTotal.Size = new System.Drawing.Size(100, 23);
+            this.lblDeudaTotal.TabIndex = 10;
             // 
             // GestionClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 517);
+            this.Controls.Add(this.lblDeudaTotal);
             this.Controls.Add(this.btnListar);
-            this.Controls.Add(this.txtTotaldeDeuda);
             this.Controls.Add(this.lblTotaldeDeuda);
             this.Controls.Add(this.grbConsultadeDATOS);
             this.Controls.Add(this.grbCargarDatos);
@@ -265,7 +267,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LimitedeCrédito;
         private System.Windows.Forms.DataGridViewTextBoxColumn Deuda;
         private System.Windows.Forms.Label lblTotaldeDeuda;
-        private System.Windows.Forms.TextBox txtTotaldeDeuda;
         private System.Windows.Forms.Button btnListar;
+        private System.Windows.Forms.Label lblDeudaTotal;
     }
 }

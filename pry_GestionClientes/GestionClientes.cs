@@ -87,7 +87,7 @@ namespace pry_GestionClientes
                 Total = Total + Clientes[i].Deuda;
                 
             }
-            lblTotaldeDeuda.Text = Total.ToString();
+            lblDeudaTotal.Text = Total.ToString();
         }
         private void btnListar_Click(object sender, EventArgs e)
             
@@ -125,6 +125,11 @@ namespace pry_GestionClientes
         private void txtLimite_TextChanged(object sender, EventArgs e)
         {
             comprobar();
+        }
+
+        private void lblTotaldeDeuda_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
